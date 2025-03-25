@@ -15,13 +15,19 @@ site_dir: "site" # Default site
 # Opcional
 nav:
   - Home: index.md
+  - POM: pages/pacote.md
   - Como Instalar?: pages/como-instalar.md
-  - Como Usar?:
-      #- Número do Processo: scripts/numero_processos.ipynb
-      - Número do Processo: pages/esaj.md
+  - Como Usar?: pages/como-usar.md
+  - Como Contribuir?: pages/ambiente-desenvolvimento.md
+  #     #- Número do Processo: scripts/numero_processos.ipynb
+  #     - Número do Processo: pages/esaj.md
       #- Chamada via WebService: scripts/consulta.ipynb
 
+  - Histórico: pages/histórico.md
   - Referências: pages/outros-projetos.md
+  - Bugs: pages/esaj-bugs.md
+  - eSAJ: pages/esaj.md
+  
 
 theme:
   # Breadcrumbs
