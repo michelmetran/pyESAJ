@@ -35,7 +35,7 @@ build:
             #- poetry install --with docs
             # https://github.com/readthedocs/readthedocs.org/issues/4912#issuecomment-1992286540
             - VIRTUAL_ENV=$READTHEDOCS_VIRTUALENV_PATH poetry install --with docs
-            - echo ${TJSP_MNI_USERNAME}
+            #- echo ${TJSP_MNI_USERNAME}
 
 # Build documentation with Mkdocs
 mkdocs:
