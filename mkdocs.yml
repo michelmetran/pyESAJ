@@ -17,7 +17,9 @@ nav:
   - Home: index.md
   - Como Instalar?: pages/como-instalar.md
   - Como Usar?:
-      - Básico: pages/como-usar.md
+      - Exemplos: pages/como-usar.md
+      - Navegador/Driver: scripts/driver.ipynb
+      - Login: scripts/login.ipynb
       - Dados Cadastrais: scripts/cadastro.ipynb
       - Gerenciamento de Perfil: scripts/gerenciamento_perfil.ipynb
       - Consulta de Processos: scripts/consulta_processo.ipynb
@@ -27,7 +29,7 @@ nav:
   - Page Object Model: pages/pacote.md
   - Bugs: pages/bugs.md
   - Intimações: pages/intimações.md
-
+  - Me, Myself and I: pages/autor.md
 
 theme:
   # Breadcrumbs
@@ -41,7 +43,6 @@ theme:
     - navigation.footer
     - search.suggest
     - search.highlight
-
     - toc.follow
     #- toc.integrate
     - content.code.annotation
@@ -114,7 +115,7 @@ plugins:
       show_input: True # Default True
       no_input: False # Default False
       #ignore: [ '1*.ipynb' ]
-      include: [ "*.ipynb" ] # Default: ["*.py", "*.ipynb"]
+      include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
       remove_tag_config:
         remove_cell_tags:
           - hide_code

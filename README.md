@@ -66,13 +66,6 @@ em funcionamento.
 
 ![eSAJ](./docs/assets/esaj.gif)
 
-<br>
-
----
-
-## Autor
-
-- [Michel Metran](https://github.com/michelmetran)
 
 <br>
 

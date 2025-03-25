@@ -17,4 +17,4 @@ log.login_1_etapa(username='name@email.com', password='********')
 
 ## _Scripts_
 
-Na pasta `scripts` é possível encontrar formas de utilização do pacote.
+Na pasta `docs/scripts` do repositório [pyESAJ](https://github.com/michelmetran/pyESAJ) é possível encontrar formas de utilização do pacote.
