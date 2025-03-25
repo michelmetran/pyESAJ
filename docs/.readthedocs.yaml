@@ -6,13 +6,41 @@ version: 2
 
 # Set the OS, Python version, and other tools you might need
 build:
-  os: ubuntu-24.04
-  tools:
-    python: "3.11"
+    os: ubuntu-24.04
+    tools:
+        python: "3.10"
+
+    # https://browniebroke.com/blog/2022-11-21-specify-docs-dependency-groups-with-poetry-and-read-the-docs/
+    # https://docs.readthedocs.com/platform/stable/config-file/v2.html#build-jobs
+    jobs:
+        # pre_create_environment:
+        #     - echo "Command run at 'pre_create_environment' step"
+
+        # post_build:
+        #     - echo "Command run at 'post_build' step"
+        #     - echo `date`
+
+        post_create_environment:
+            # Install Poetry
+            #- pip install poetry
+            - python -m pip install poetry
+
+            # Tell Poetry to not use a virtual environment
+            #- poetry config virtualenvs.create false
+            #- echo "Command run at 'pre_create_environment' step"
+            #- poetry install --with docs
+
+        post_install:
+            # Install dependencies
+            #- poetry install --with docs
+            # https://github.com/readthedocs/readthedocs.org/issues/4912#issuecomment-1992286540
+            - VIRTUAL_ENV=$READTHEDOCS_VIRTUALENV_PATH poetry install --with docs
+            - echo ${TJSP_MNI_USERNAME}
 
 # Build documentation with Mkdocs
 mkdocs:
-  configuration: mkdocs.yml
+    configuration: mkdocs.yml
+
 # Optionally, but recommended,
 # declare the Python requirements required to build your documentation
 # See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
@@ -20,3 +48,7 @@ mkdocs:
 #    install:
 #    - requirements: docs/requirements.txt
 
+# Optionally build your docs in additional formats such as PDF and ePub
+formats:
+    - pdf
+    - epub
