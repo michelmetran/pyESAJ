@@ -15,19 +15,19 @@ site_dir: "site" # Default site
 # Opcional
 nav:
   - Home: index.md
-  - POM: pages/pacote.md
   - Como Instalar?: pages/como-instalar.md
-  - Como Usar?: pages/como-usar.md
-  - Como Contribuir?: pages/ambiente-desenvolvimento.md
-  #     #- Número do Processo: scripts/numero_processos.ipynb
-  #     - Número do Processo: pages/esaj.md
-      #- Chamada via WebService: scripts/consulta.ipynb
-
+  - Como Usar?:
+      - Básico: pages/como-usar.md
+      - Dados Cadastrais: scripts/cadastro.ipynb
+      - Gerenciamento de Perfil: scripts/gerenciamento_perfil.ipynb
+      - Consulta de Processos: scripts/consulta_processo.ipynb
+  - Como Contribuir?: pages/como-contribuir.md
   - Histórico: pages/histórico.md
   - Referências: pages/outros-projetos.md
-  - Bugs: pages/esaj-bugs.md
-  - eSAJ: pages/esaj.md
-  
+  - Page Object Model: pages/pacote.md
+  - Bugs: pages/bugs.md
+  - Intimações: pages/intimações.md
+
 
 theme:
   # Breadcrumbs
@@ -57,8 +57,8 @@ theme:
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: red
-      accent: deep purple
+      primary: deep purple
+      accent: indigo
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
@@ -66,8 +66,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: red
-      accent: deep purple
+      primary: deep purple
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -75,8 +75,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: red
-      accent: deep purple
+      primary: deep purple
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -110,11 +110,11 @@ plugins:
   - mkdocs-jupyter:
       ignore_h1_titles: True
       include_source: True
-      execute: true
+      execute: false
       show_input: True # Default True
       no_input: False # Default False
       #ignore: [ '1*.ipynb' ]
-      include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
+      include: [ "*.ipynb" ] # Default: ["*.py", "*.ipynb"]
       remove_tag_config:
         remove_cell_tags:
           - hide_code

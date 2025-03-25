@@ -1,20 +1,33 @@
-Tratando-se de um pacote privado, armazenado no repositório
-do [AzureDevOps](https://dev.azure.com/mpsp/Informa%C3%A7%C3%B5es%20Estat%C3%ADsticas/_artifacts/feed/pypi-mpsp/PyPI/pyesaj/),
-é necessário instalar previamente o `artifacts-keyring` para obter credenciais
-da organização. Caso opte por não usar o `artifacts-keyring`, será necessário
-inserir o _username_ (utilizado no MPSP) e o _password_ (que na realidade é o
-_Personal Access Token_ - PAT).
+O pacote está disponível no repositório oficial do _python_, o PyPI, sob o
+nome [pyESAJ](https://pypi.org/project/pyesaj/).
+
+Para instalar basta dar o comando:
 
 ```shell
-# Install
-pip3 install artifacts-keyring
+# Instala pacote
+pip3 install pyESAJ
 
-# Install Specific Version
-pip3 install pyesaj==0.1.3 --index-url https://pkgs.dev.azure.com/mpsp/Informações%20Estatísticas/_packaging/pypi-mpsp/pypi/simple
+# Instala pacote com versão específicada
+pip3 install pyESAJ==0.1.2
 
-# Upgrade
-pip3 install pyesaj --upgrade --index-url https://pkgs.dev.azure.com/mpsp/Informações%20Estatísticas/_packaging/pypi-mpsp/pypi/simple
+# Instala pacote mais atual
+pip3 install pyESAJ --upgrade
 
 # Uninstall
 pip3 uninstall pyesaj
 ```
+
+<br>
+
+---
+
+## Requisitos
+
+O pacote utiliza o
+_framework_ [selenium](https://selenium-python.readthedocs.io/) para instanciar
+um _driver_ (ou navegador) que é manipulado pelo código.
+
+Há a possibilidade de utililizar o _driver_
+do [_Google Chrome_](https://www.google.com/intl/pt-BR/chrome/)
+ou [_Firefox_](https://www.mozilla.org/). É necessário que o navegador de sua
+escolha esteja instalado corretamente.
