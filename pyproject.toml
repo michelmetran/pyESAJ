@@ -1,0 +1,74 @@
+[project]
+name = "pyesaj"
+version = "1.1.4"
+description = "Programa para interagir com o 'Sistema de Automação da Justiça' (e-SAJ), do Tribunal de Justiça do Estado de São Paulo (TJSP)"
+keywords = ["esaj", "tjsp", "mpsp"]
+authors = [
+    { name = "Michel Metran", email = "michelmetran@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "zeep (>=4.3.1,<5.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "pandas (>=2.2.2,<3.0.0)",
+    "notebook (>=7.3.3,<8.0.0)",
+    "case-converter (>=1.1.0,<2.0.0)",
+    #"mkdocs-material[imaging] (>=9.6.9,<10.0.0)",
+    # selenium = "^4.24.0"
+    # python-dotenv = "^1.0.1"
+    # ipykernel = "^6.29.5"
+    # requests = "^2.32.3"
+    # pydantic = { extras = ["email"], version = "^2.9.1" }
+    # openpyxl = "^3.1.5"
+    # notebook = "^7.3.3"
+    "selenium (>=4.30.0,<5.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "pydantic[email] (>=2.10.6,<3.0.0)",
+    "requests (>=2.32.3,<3.0.0)"
+
+]
+
+
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: Portuguese (Brazilian)",
+    'Intended Audience :: Developers',
+]
+
+
+[project.urls]
+Homepage = "https://github.com/michelmetran/pyESAJ"
+Issues = "https://github.com/michelmetran/pyESAJ/issues"
+Repository = "https://github.com/michelmetran/pyESAJ.git"
+Documentation = "https://pyESAJ.readthedocs.io"
+
+
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+
+
+
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = ">=1.6.1,<2.0.0"
+pymdown-extensions = ">=10.14.3,<11.0.0"
+mkdocs-material = { extras = ["imaging"], version = "^9.6.9" }
+mkdocs-jupyter = ">=0.25.1,<0.26.0"

@@ -1,0 +1,9 @@
+# Filtros
+*.ipynb filter=nbstripout
+*.ipynb diff=ipynb
+
+# Filtros
+* text=auto eol=lf
+*.bat text eol=lf
+*.py text eol=lf
+*.md text eol=lf

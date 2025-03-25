@@ -1,0 +1,26 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+root = true
+
+# Geral
+[*]
+charset = utf-8
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+max_line_length = 80
+
+# Sobreescrever Geral
+[*.py]
+indent_size = 4
+
+# Sobreescrever Geral
+[*.md]
+indent_size = 2
+
+
+# Sobreescrever Geral
+[*.yml]
+indent_size = 2
