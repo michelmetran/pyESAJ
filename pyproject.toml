@@ -1,6 +1,6 @@
 [project]
 name = "pyesaj"
-version = "1.1.10"
+version = "1.1.11"
 description = "Programa para interagir com o 'Sistema de Automação da Justiça' (e-SAJ), do Tribunal de Justiça do Estado de São Paulo (TJSP)"
 keywords = ["esaj", "tjsp", "mpsp"]
 authors = [

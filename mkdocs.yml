@@ -23,9 +23,8 @@ nav:
       - Dados Cadastrais: scripts/cadastro.ipynb
       - Gerenciamento de Perfil: scripts/gerenciamento_perfil.ipynb
       - Consulta de Processos: scripts/consulta_processo.ipynb
-  - Como Contribuir?: pages/como-contribuir.md
   - Histórico: pages/histórico.md
-  - Referências: pages/outros-projetos.md
+  - Como Contribuir?: pages/como-contribuir.md
   - Page Object Model: pages/pacote.md
   - Bugs: pages/bugs.md
   - Intimações: pages/intimações.md

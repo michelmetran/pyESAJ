@@ -6,7 +6,7 @@ No início de 2023 migrei pro _Centro de Tecnologia da Informação e Comunicaç
 
 ???+ note "Necessidade de APIs"
 
-    Entendo fortemente que as instituições deveriam trabalhar em conjunto para que existem APIs de integração entre sistemas. A título exemplificativo: apenas a Procuradoria Criminal do MPSP recebe aproximadamente 15.000 intimações por mês, as quais precisam ser especializadas MANUALMENTE! 💩
+    Entendo fortemente que as instituições deveriam trabalhar em conjunto para que sejam desenvolvidas APIs de integração entre sistemas. A título exemplificativo: apenas a Procuradoria Criminal do MPSP recebe aproximadamente 15.000 intimações por mês, as quais precisam ser especializadas MANUALMENTE! 💩
 
 <br>
 

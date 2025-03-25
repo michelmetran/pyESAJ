@@ -15,10 +15,6 @@ Isso ajuda a reduzir a duplicação de código e facilita a manutenção dos tes
 
 <br>
 
----
-
-## Opções
-
 Assistindo aos
 vídeos [Page Object Model In Selenium WebDriver | Introduction](https://www.youtube.com/watch?v=dtmqIHsPPug) (vídeo
 curto, de
@@ -55,9 +51,29 @@ Além disso tem o material do Eduardo Mendes, que é excelente.
 
 ---
 
-## Outras Referência
+### Outras Referência
 
 - [6 | Page Object Model | Selenium Python](https://www.youtube.com/watch?v=0kHbK5iZkN0)
 - [Boost Your Web Scraping Efficiency: Learn How to Clear Cache in Python Selenium](https://medium.com/@meiyee715/boost-your-web-scraping-efficiency-learn-how-to-clear-cache-in-python-selenium-c6425dacd6a0)
 - [gunesmes/page-object-python-selenium](https://github.com/gunesmes/page-object-python-selenium) é um _repo_ com um modelo de _PageObjectModel_
 - [Measure and Optimize Page Load Time With Selenium](https://www.lambdatest.com/blog/how-to-measure-page-load-times-with-selenium/)
+
+<br>
+
+---
+
+## Outros Projetos
+
+Existem outros projetos para raspar dados dos Tribunais.
+
+### Linguagem _R_
+
+Há um pacote de R chamado [tjsp](https://github.com/jjesusfilho/tjsp), do [José de Jesus Filho](https://github.com/jjesusfilho), que obtém dados do TJSP para fazer estudos de **jurimetria**.
+
+<br>
+
+---
+
+### Linguagem _python_
+
+O projeto [esaj](http://courtsbr.github.io/esaj), por exemplo faz o _download_ das páginas do e-SAJ em formato _.html_. Não serve para meu propósito, mas pareceu interessante.
