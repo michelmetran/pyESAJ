@@ -1,6 +1,6 @@
 [project]
 name = "pyesaj"
-version = "1.1.4"
+version = "1.1.5"
 description = "Programa para interagir com o 'Sistema de Automação da Justiça' (e-SAJ), do Tribunal de Justiça do Estado de São Paulo (TJSP)"
 keywords = ["esaj", "tjsp", "mpsp"]
 authors = [
@@ -45,11 +45,6 @@ Repository = "https://github.com/michelmetran/pyESAJ.git"
 Documentation = "https://pyESAJ.readthedocs.io"
 
 
-
-
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.5"
-
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
@@ -63,3 +58,6 @@ mkdocs = ">=1.6.1,<2.0.0"
 pymdown-extensions = ">=10.14.3,<11.0.0"
 mkdocs-material = { extras = ["imaging"], version = "^9.6.9" }
 mkdocs-jupyter = ">=0.25.1,<0.26.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
