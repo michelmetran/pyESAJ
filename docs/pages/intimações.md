@@ -9,14 +9,11 @@ intimações: elas podem vir em qualquer horário.
 As intimações ficam disponíveis no e-SAJ, para serem recebidas pelo MPSP, por 10
 dias sem que se conte o prazo (são os "10 dias de graça"). Nesse período elas
 podem ser consultadas em
-**_"Recebimento de Intimações Eletrônicas"_** (
-_link_ https://esaj.tjsp.jus.br/intimacoesweb/abrirConsultaAtosNaoRecebidos.do).
+**_"Recebimento de Intimações Eletrônicas"_** (_link_ [https://esaj.tjsp.jus.br/intimacoesweb/**abrirConsultaAtosNaoRecebidos**.do](https://esaj.tjsp.jus.br/intimacoesweb/abrirConsultaAtosNaoRecebidos.do)).
 
-![intimações](/docs/assets/intimações.png)
+![intimações](../assets/intimações.png)
 
 <br>
 
 Após isso ocorre o recebimento automático das intimações, o prazo começa a
-contar, e as intimações só podem ser acessadas em *
-*_"Consulta de Intimações Recebidas"_** (
-_link_ https://esaj.tjsp.jus.br/intimacoesweb/abrirConsultaAtosRecebidos.do).
+contar, e as intimações só podem ser acessadas em **_"Consulta de Intimações Recebidas"_** (_link_ [https://esaj.tjsp.jus.br/intimacoesweb/**abrirConsultaAtosRecebidos**.do](https://esaj.tjsp.jus.br/intimacoesweb/abrirConsultaAtosRecebidos.do)).

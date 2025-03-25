@@ -3,4 +3,4 @@ Intimações". Com isso descobri que vários componentes eram idênticos e,
 portanto, criei um módulo _general.py_ que tem tudo sobre as intimações.
 
 Em março de 2025, com a mudança na forma de autenticação no portal e-SAJ, foi
-necesário refatorar o projeto para permitir o _login_.
+necesário refatorar o projeto para permitir o _login_. Nessa época também optei por tornar o projeto do pyESAJ público.
