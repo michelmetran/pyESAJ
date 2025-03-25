@@ -6,11 +6,12 @@
 # Outros
 docs/pessoal/
 docs/lixo/
-scripts/mpsp/
+
 data/
 _lixo/
 #tests/
 scripts/
+scripts/mpsp/
 
 # Selenium
 scrapy/
