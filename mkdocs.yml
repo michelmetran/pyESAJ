@@ -2,7 +2,8 @@
 site_name: pyESAJ
 site_author: Michel Metran
 site_description: O e-SAJ (Sistema de Automação da Justiça) é um portal do TJSP, desenvolvido pela Softplan, que facilita a troca de informações e agiliza o trâmite processual. O pacote pyESAJ foi desenvolvido para permitir a interação com o e-SAJ por meio do python.
-site_url: https://pyESAJ.readthedocs.io/
+#site_url: https://pyESAJ.readthedocs.io/
+site_url: https://pyesaj.readthedocs.io/pt/latest/
 copyright: |
   &copy; 2025 <a href="https://github.com/michelmetran"  target="_blank" rel="noopener">Michel Metran</a>
 
@@ -120,7 +121,7 @@ plugins:
       #cards_layout: default
       cards_layout_options:
         background_color: "#ff1493"
-        #background_image: docs/assets/bug-paginacao.png
+        background_image: docs/assets/bug-paginacao.png
         color: "#ffffff"
         #font_family: Ubuntu
         # logo: docs/assets/logo.png
