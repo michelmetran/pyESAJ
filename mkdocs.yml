@@ -106,16 +106,25 @@ markdown_extensions:
       separator: "_"
 
 plugins:
-  - search
+  - search:
+      lang: pt
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - tags:
+      tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      tags_slugify_format: "tag:{slug}"
+      tags_hierarchy: true
+
   - social:
       #cards_layout: default
       cards_layout_options:
         background_color: "#ff1493"
-        background_image: docs/assets/bug-paginacao.png
+        #background_image: docs/assets/bug-paginacao.png
         color: "#ffffff"
         #font_family: Ubuntu
         # logo: docs/assets/logo.png
-        title: My custom title
+        #title: My custom title
 
   #- projects
   - mkdocs-jupyter:
