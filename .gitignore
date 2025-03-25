@@ -10,9 +10,9 @@ docs/lixo/
 data/
 _lixo/
 #tests/
-scripts/
+#scripts/
 scripts2/
-scripts/mpsp/
+#scripts/mpsp/
 
 # Selenium
 scrapy/
