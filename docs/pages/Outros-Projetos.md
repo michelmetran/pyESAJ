@@ -19,5 +19,3 @@ O trabalho que ele desenvolve, bem como o trabalho que ele fazia no MPSP influen
 
 Pesquisando encontrei também projetos similares. O projeto [esaj](http://courtsbr.github.io/esaj), por exemplo faz o
 _download_ das páginas do e-SAJ em formato _.html_. Não serve para meu propósito, mas pareceu interessante.
-
-

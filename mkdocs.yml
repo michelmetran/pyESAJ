@@ -1,1 +1,131 @@
-site_name: My Docs
+# Basic
+site_name: pyESAJ
+site_author: Michel Metran
+site_url: https://pyESAJ.readthedocs.io/
+copyright: |
+  &copy; 2025 <a href="https://github.com/michelmetran"  target="_blank" rel="noopener">Michel Metran</a>
+
+# GitHub Repo Link
+repo_url: https://github.com/michelmetran/pyESAJ
+
+docs_dir: "docs" # Default docs
+site_dir: "site" # Default site
+
+# NavBar
+# Opcional
+nav:
+  - Home: index.md
+  - Como Instalar?: pages/como-instalar.md
+  - Como Usar?:
+      #- Número do Processo: scripts/numero_processos.ipynb
+      - Número do Processo: pages/esaj.md
+      #- Chamada via WebService: scripts/consulta.ipynb
+
+  - Referências: pages/outros-projetos.md
+
+theme:
+  # Breadcrumbs
+  features:
+    - navigation.path
+    - navigation.top
+    #- navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+
+    - toc.follow
+    #- toc.integrate
+    - content.code.annotation
+    - content.code.copy
+
+  language: pt-BR
+
+  icon:
+    repo: fontawesome/brands/github
+    favicon: attachment/favicon-32x32.png
+
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: red
+      accent: deep purple
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+# https://facelessuser.github.io/pymdown-extensions/
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji # Suporte a emojis
+  - pymdownx.tasklist # Suporte à tarefas
+  - pymdownx.mark # Marcado
+  - pymdownx.tilde # Realçado
+  - pymdownx.highlight # Código
+  #  - pymdownx.superfences:
+  #      custom_fences:
+  #        - name: mermaid
+  #          class: mermaid
+  #          format: !!python/name:pymdownx.superfences.fence_code_format
+  #            # Referências
+  #            # https://github.com/facelessuser/pymdown-extensions/blob/main/docs/src/mkdocs.yml
+
+  - toc:
+      permalink: true
+      separator: "_"
+
+plugins:
+  - social
+  - search
+  #- projects
+  - mkdocs-jupyter:
+      ignore_h1_titles: True
+      include_source: True
+      execute: true
+      show_input: True # Default True
+      no_input: False # Default False
+      #ignore: [ '1*.ipynb' ]
+      include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
+      remove_tag_config:
+        remove_cell_tags:
+          - hide_code
+
+extra:
+  analytics:
+    provider: google
+    property: GT-PZVTRDZX
+
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/michelmetran
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/michelmetran/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/michelmetran
+
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#versioning
+  version:
+    provider: mike

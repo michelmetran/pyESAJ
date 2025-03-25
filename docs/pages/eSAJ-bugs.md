@@ -9,7 +9,7 @@ Seria importante reportar estes erros à [Secretaria de Tecnologia da Informaç�
 
 ## Número Total de Intimações
 
-![Paginacao](/.attachments/bug-paginacao.png)
+![Paginacao](../assets/bug-paginacao.png)
 
 Notei que o número total de intimações está com erro.
 
@@ -25,4 +25,4 @@ O número 134 está errado! Temos, na realidade, 135 intimações.
 
 Na página de [Recebimento de Intimações](https://esaj.tjsp.jus.br/intimacoesweb/consultarAtosNaoRecebidos.do), após filtrar um determinado conjunto de intimações, ao navegar pelas páginas utilizando as setas, avançando e retrocedendo no número de páginas está tudo certo. Os controles funcionam conforme esperado.
 
-Contudo, ao inserir um número de página e apertar o tecla "Enter" o usuário é redirecionado para uma página fora do escopo do "Recebimento de Intimações", inpossibilitando a navegação por esses
+Contudo, ao inserir um número de página e apertar o tecla "Enter" o usuário é redirecionado para uma página fora do escopo do "Recebimento de Intimações", inpossibilitando a navegação por esse método.
