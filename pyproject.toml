@@ -11,11 +11,11 @@ requires-python = ">=3.10"
 license = "GPL-3.0"
 license-files = ["LICEN[CS]E*"]
 dependencies = [
-    "zeep (>=4.3.1,<5.0.0)",
+    #"zeep (>=4.3.1,<5.0.0)",
     "python-dotenv (>=1.0.1,<2.0.0)",
     "pandas (>=2.2.2,<3.0.0)",
     "notebook (>=7.3.3,<8.0.0)",
-    "case-converter (>=1.1.0,<2.0.0)",
+    #"case-converter (>=1.1.0,<2.0.0)",
     #"mkdocs-material[imaging] (>=9.6.9,<10.0.0)",
     # selenium = "^4.24.0"
     # python-dotenv = "^1.0.1"
@@ -30,9 +30,6 @@ dependencies = [
     "requests (>=2.32.3,<3.0.0)"
 
 ]
-
-
-
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
@@ -40,7 +37,6 @@ classifiers = [
     "Natural Language :: Portuguese (Brazilian)",
     'Intended Audience :: Developers',
 ]
-
 
 [project.urls]
 Homepage = "https://github.com/michelmetran/pyESAJ"
@@ -57,11 +53,6 @@ ipykernel = "^6.29.5"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-
-
-
-
 
 
 [tool.poetry.group.docs]
