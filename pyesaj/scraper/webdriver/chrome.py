@@ -7,10 +7,11 @@ Atualizado em: 24.10.2024
 """
 
 import tempfile
+from pathlib import Path
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
-from pathlib import Path
+
 from pyesaj.scraper.webdriver import config
 
 # from selenium.webdriver.chrome.service import Service as ChromeService
@@ -40,6 +41,7 @@ class Chrome(webdriver.Chrome):
         # Parameters
         headless = kwargs.get('headless', False)
         self.download_path = kwargs.get('download_path', False)
+        modo_colab = kwargs.get('modo_colab', False)
 
         # Temp Path
         temp_path = tempfile.gettempdir()
@@ -104,6 +106,11 @@ class Chrome(webdriver.Chrome):
         if headless is True:
             options.add_argument('--headless')
 
+        if modo_colab is True:
+            options.add_argument('--headless')
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+
         super().__init__(
             # service=my_service,
             options=options
@@ -116,7 +123,7 @@ if __name__ == '__main__':
 
     from selenium.webdriver.common.by import By
 
-    import pyesaj as esaj
+    import pyesaj.scraper as esaj
 
     # # Credenciais
     # load_dotenv()
