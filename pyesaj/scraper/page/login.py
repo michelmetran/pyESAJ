@@ -2,9 +2,11 @@
 Módulo com a página de login
 """
 
+import time
 from urllib.parse import urlparse
 
 from selenium.webdriver.common.by import By
+
 from pyesaj.scraper.pom import Page, PageElement
 
 

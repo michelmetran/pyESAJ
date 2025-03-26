@@ -4,6 +4,7 @@ utilizando a estrutura de Page Object Model (POM)
 """
 
 import logging
+import time
 from abc import ABC
 from typing import List, Optional, Union
 
