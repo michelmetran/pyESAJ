@@ -129,7 +129,7 @@ class Periodo(PageElement):
 class CienciaAto(PageElement):
     """
     Representa o menu *dropdown* "Ciência do Ato", que define
-    qual o tip da ciência do ato desejada.
+    qual o tipo da ciência do ato desejada.
     """
 
     selector_em_nome_de = (
@@ -139,7 +139,7 @@ class CienciaAto(PageElement):
 
     def get_options(self) -> List[str]:
         """
-        Obtem opções de preenchimento.
+        Obtém opções de preenchimento.
         """
         return self.create_select_options(self.selector_em_nome_de)
 
@@ -205,7 +205,8 @@ if __name__ == '__main__':
 
     # Entra no eSAJ e loga
     log = esaj.scraper.page.Login(driver=driver2)
-    log.login(username=USERNAME, password=PASSWORD)
+    log.login_1_etapa(username=USERNAME, password=PASSWORD)
+    time.sleep(30)
 
     # Consulta Intimações
     esaj.scraper.page.intim.Consulta(driver=driver2)

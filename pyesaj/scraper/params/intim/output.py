@@ -85,7 +85,7 @@ class RecebimentoIntimacoes2Grau(BaseModel):
     @field_validator('disponibilizacao')
     def convert_to_date(cls, v):
         """
-        Converte para datetime, isoformat
+        Converte para datetime, iso format
         """
         if v == '':
             return None
@@ -128,16 +128,16 @@ class ConsultaIntimacoes2Grau(BaseModel):
     @field_validator('disponibilizacao', 'data_intimacao')
     def convert_to_date(cls, v):
         """
-        Converte para datetime, isoformat
+        Converte para datetime, iso format
         """
         if v == '':
             return None
-        
+
         # É possível que, no menu Consultas, tenham processos sem registro da data de intimação
         # Nessa situação, vem "None"
         elif v is None:
             return None
-        
+
         return datetime.strptime(v, '%d/%m/%Y').date().isoformat()
         # return datetime.strptime(v, '%d/%m/%Y').date().norma
 

@@ -124,7 +124,7 @@ class NomeParte(PageElement):
     nome_parte = (By.XPATH, '//input[@id="campo_NMPARTE"]')
     check_box_nome_completo = (
         By.XPATH,
-        #'//div[@id="NMPARTE"]//span[@id="pesquisarPorNomeCompleto"]',
+        # '//div[@id="NMPARTE"]//span[@id="pesquisarPorNomeCompleto"]',
         # '//div[@id="NMPARTE"]//span[contains(text(),"Pesquisar por nome completo")]',
         '//div[@id="NMPARTE"]//label',
     )
@@ -165,7 +165,7 @@ class NomeAdvogado(PageElement):
     nome_adv = (By.XPATH, '//input[@id="campo_NMADVOGADO"]')
     check_box_nome_completo = (
         By.XPATH,
-        #'//div[@id="NMADVOGADO"]//span[@id="pesquisarPorNomeCompleto"]',
+        # '//div[@id="NMADVOGADO"]//span[@id="pesquisarPorNomeCompleto"]',
         '//div[@id="NMADVOGADO"]//label',
     )
 
@@ -296,8 +296,8 @@ class CheckResults(PageElement):
                 # Mensagem
                 warnings.warn(
                     message=f'\n'
-                    f'A pesquisa não retornou nenhum resultado.\n'
-                    f'\n',
+                            f'A pesquisa não retornou nenhum resultado.\n'
+                            f'\n',
                     category=RuntimeWarning,
                 )
                 # Se encontra a mensagem, significa que não tem resultado
@@ -317,7 +317,7 @@ if __name__ == '__main__':
 
     from dotenv import load_dotenv
 
-    from pyesaj import webdriver
+    from pyesaj.scraper import webdriver
 
     # Credenciais
     load_dotenv()
@@ -325,7 +325,7 @@ if __name__ == '__main__':
     PASSWORD = os.getenv('PASSWORD_TJSP')
 
     # Cria Driver
-    driver = webdriver.Firefox(
+    driver2 = webdriver.Firefox(
         # driver_path=paths.driver_path,
         # logs_path=paths.app_logs_path,
         # down_path=paths.driver_path,
@@ -333,7 +333,7 @@ if __name__ == '__main__':
     )
 
     # Intimações
-    consulta = ConsultaProcesso(driver=driver, grau='Primeiro Grau')
+    consulta = ConsultaProcesso(driver=driver2, grau='Primeiro Grau')
     # consulta.define_instancia(grau='1º grau')
 
     # Entra no eSAJ e loga
@@ -341,60 +341,60 @@ if __name__ == '__main__':
     # esaj.login(username=USERNAME, password=PASSWORD)
 
     # Consultar Por
-    por = ConsultaPor(driver=driver)
+    por = ConsultaPor(driver=driver2)
     print(por.get_options())
     por.set_option(option='Número do Processo')
 
     # Número
-    num = NumeroUnificado(driver=driver)
+    num = NumeroUnificado(driver=driver2)
     num.define_numero(numero='0123479-07.2012.8.26.0100')
 
     # Nome da Parte
     por.set_option(option='Nome da parte')
-    nom = NomeParte(driver=driver)
+    nom = NomeParte(driver=driver2)
     nom.set_nome_parte(nome='Michel Metran')
     nom.pesquisa_nome_completo()
 
     # Documento da Parte
     por.set_option(option='Documento da Parte')
-    doc = DocumentoParte(driver=driver)
+    doc = DocumentoParte(driver=driver2)
     doc.set_documento(documento='324423324')
 
     # Nome do Advogado
     por.set_option(option='Nome do Advogado')
-    adv = NomeAdvogado(driver=driver)
+    adv = NomeAdvogado(driver=driver2)
     adv.set_nome_adv(nome='Zé')
     adv.pesquisa_nome_completo()
 
     # Nome do Advogado
     por.set_option(option='OAB')
-    o = OAB(driver=driver)
+    o = OAB(driver=driver2)
     o.set_documento(documento='324423324')
 
     # Nº da Carta Precatória na Origem
     por.set_option(option='Nº da Carta Precatória na Origem')
-    a2 = NumCartaPrecatoria(driver=driver)
+    a2 = NumCartaPrecatoria(driver=driver2)
     a2.set_documento(documento='Cartaprecatoria')
 
     # Nº do Documento na Delegacia
     por.set_option(option='Nº do Documento na Delegacia')
-    a3 = NumDocDelegacia(driver=driver)
+    a3 = NumDocDelegacia(driver=driver2)
     a3.set_documento(documento='Doc Delegacia')
 
     # CDA
     por.set_option(option='CDA')
-    a4o = CDA(driver=driver)
+    a4o = CDA(driver=driver2)
     a4o.set_documento(documento='CDA')
 
     # Nome da Parte
     por.set_option(option='Nome da parte')
-    nom = NomeParte(driver=driver)
+    nom = NomeParte(driver=driver2)
     nom.set_nome_parte(nome='Michel Metran')
     nom.pesquisa_nome_completo()
 
     # Consultar
-    con = Consultar(driver=driver)
+    con = Consultar(driver=driver2)
     con.consultar()
 
     time.sleep(2)
-    driver.quit()
+    driver2.quit()

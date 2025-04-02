@@ -49,7 +49,7 @@ class EmNomeDe(PageElement):
 
     def get_options(self) -> List[str]:
         """
-        Obtem opções de preenchimento.
+        Obtêm opções de preenchimento.
         """
         return self.create_select_options(self.selector_em_nome_de)
 
@@ -156,7 +156,7 @@ class Instancia(PageElement):
     ):
         """
         Determina qual o xPath de interesse
-        Método Privado.
+        Função Privada.
         """
         # instancia = self.get_selected_option()
         # print(f'Instância definida como: {instancia}')
@@ -176,7 +176,7 @@ class Instancia(PageElement):
 
         return instancia_xpath
 
-    def check_avaibled(
+    def check_available(
         self,
         instancia: Literal['Primeiro Grau', 'Segundo Grau', 'Turmas Recursais'],
     ):
@@ -184,6 +184,7 @@ class Instancia(PageElement):
         Avalia se a opção está disponível para o usuário logado.
         Pode haver instâncias não disponíveis
         """
+        time.sleep(1)
         instancia_xpath = self._get_xpath_instance(instancia=instancia)
         # instancia = self.get_selected_option()
         # Valida permissões
@@ -201,7 +202,7 @@ class Instancia(PageElement):
         Define a opção para preenchimento do campo.
         """
         # Avalia se opção está disponível
-        self.check_avaibled(instancia=instancia)
+        self.check_available(instancia=instancia)
 
         # Avalia Instância Atualmente Selecionada
         instancia_atual = self.get_selected_option()

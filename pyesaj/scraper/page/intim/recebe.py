@@ -73,7 +73,7 @@ class Paginacao(PageElement):
         """
         Pega Página atual
         pega total de páginas
-        Vai pra próxima, desde que seja menor que o número total de paginas
+        Vai para próxima, desde que seja menor que o número total de páginas
         Aguarda carregar
         """
         # Número de Páginas
@@ -235,7 +235,7 @@ if __name__ == '__main__':
 
     from dotenv import load_dotenv
 
-    import pyesaj as esaj
+    import pyesaj.scraper as esaj
 
     # Credenciais
     load_dotenv()
@@ -243,20 +243,21 @@ if __name__ == '__main__':
     PASSWORD = os.getenv('PASSWORD_TJSP')
 
     # Cria Driver
-    driver = esaj.webdriver.Firefox(verify_ssl=False)
+    driver2 = esaj.webdriver.Firefox(verify_ssl=False)
 
     # Entra no eSAJ e loga
-    log = esaj.page.Login(driver=driver)
-    log.login(username=USERNAME, password=PASSWORD)
+    log = esaj.page.Login(driver=driver2)
+    log.login_1_etapa(username=USERNAME, password=PASSWORD)
+    time.sleep(30)
 
     # Intimações
-    intim = esaj.page.intim.Recebimento(driver=driver)
+    intim = esaj.page.intim.Recebimento(driver=driver2)
 
-    intim_em_nome = esaj.page.intim.EmNomeDe(driver=driver)
+    intim_em_nome = esaj.page.intim.EmNomeDe(driver=driver2)
     intim_em_nome.set_option(option='Ministério Público do Estado de São Paulo')
 
     # Instância: 1º Grau
-    intim_inst = esaj.page.intim.Instancia(driver=driver)
+    intim_inst = esaj.page.intim.Instancia(driver=driver2)
     intim_inst.set_option(instancia='Primeiro Grau')
 
     # # Foro
@@ -275,11 +276,11 @@ if __name__ == '__main__':
     # intim_esp.set_option(option='Registros Públicos')
 
     # Instância: 2º Grau
-    intim_inst = esaj.page.intim.Instancia(driver=driver)
+    intim_inst = esaj.page.intim.Instancia(driver=driver2)
     intim_inst.set_option(instancia='Segundo Grau')
 
     # Seção
-    intim_secao = esaj.page.intim.Secao(driver=driver)
+    intim_secao = esaj.page.intim.Secao(driver=driver2)
     print(intim_secao.get_options())
     intim_secao.set_option(option='Direito Privado 2')
 
@@ -288,13 +289,13 @@ if __name__ == '__main__':
     # print(intim_org.get_options())
 
     # Consultar
-    consulta = pyesaj.scraper.page.intim.recebe.ConsultarIntimacoes(driver=driver)
-    consulta.consultar()
+    consulta = esaj.page.intim.consulta.Consulta(driver=driver2)
+    #consulta.consultar()
     time.sleep(5)
 
     # Paginação
-    pag = pyesaj.scraper.page.intim.recebe.Paginacao(driver=driver)
+    pag = esaj.page.intim.recebe.Paginacao(driver=driver2)
     print(pag.infos())
 
     time.sleep(5)
-    driver.quit()
+    driver2.quit()

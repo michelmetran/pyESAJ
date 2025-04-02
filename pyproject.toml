@@ -1,6 +1,6 @@
 [project]
 name = "pyesaj"
-version = "1.1.19"
+version = "1.1.20"
 description = "Programa para interagir com o 'Sistema de Automação da Justiça' (e-SAJ), do Tribunal de Justiça do Estado de São Paulo (TJSP)"
 keywords = ["esaj", "tjsp", "mpsp"]
 authors = [
@@ -15,20 +15,14 @@ dependencies = [
     "python-dotenv (>=1.0.1,<2.0.0)",
     "pandas (>=2.2.2,<3.0.0)",
     "notebook (>=7.3.3,<8.0.0)",
-    #"case-converter (>=1.1.0,<2.0.0)",
-    #"mkdocs-material[imaging] (>=9.6.9,<10.0.0)",
-    # selenium = "^4.24.0"
-    # python-dotenv = "^1.0.1"
-    # ipykernel = "^6.29.5"
-    # requests = "^2.32.3"
-    # pydantic = { extras = ["email"], version = "^2.9.1" }
-    # openpyxl = "^3.1.5"
-    # notebook = "^7.3.3"
     "selenium (>=4.30.0,<5.0.0)",
     "openpyxl (>=3.1.5,<4.0.0)",
     "pydantic[email] (>=2.10.6,<3.0.0)",
     "requests (>=2.32.3,<3.0.0)"
-
+    #"case-converter (>=1.1.0,<2.0.0)",
+    #"mkdocs-material[imaging] (>=9.6.9,<10.0.0)",
+    # ipykernel = "^6.29.5"
+    # pydantic = { extras = ["email"], version = "^2.9.1" }
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
