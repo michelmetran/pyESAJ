@@ -1140,12 +1140,15 @@ class Tabela(PageElement):
 
 class Acoes(PageElement):
     """
-    Represante os botões que promovem "Ações", tais como:
+    Representa os botões que promovem "Ações", tais como:
     - Receber
     - Especializar
     - Exportar
     """
-
+    titulo = (
+        By.XPATH,
+        '//h1[@class="esajTituloPagina"]',
+    )
     # btn_define = (
     #     By.XPATH,
     #     '//table[@class="secaoBotoesBody"]//input[@id="definirEspecialidade"]',
@@ -1173,7 +1176,24 @@ class Acoes(PageElement):
         Aperta botão para "Definir Especialização e Cargo"
         """
         # Avaliar se algum processo está selecionado
+        # TODO: Atestar que ele acessou.
         self.click(self.btn_define)
+
+        titulo_pagina = self.get_text(locator=self.titulo)
+        if titulo_pagina == 'Definir especialização/cargo':
+            path = urlparse(url=self.driver.current_url).path
+            if path not in [
+                '/intimacoesweb/abrirTelaDeDefinicaoEspecialidadeParaAtosRecebidosSelecionados.do',
+                '/intimacoesweb/abrirTelaDeDefinicaoEspecialidadeParaAtosNaoRecebidosSelecionados.do',
+                # Chega nessa situação/url após dar dois cliques em "Confirmar". 26.11.2024
+                '/intimacoesweb/cadastrarEspecialidade.do',
+            ]:
+                raise Exception(
+                    'Necessário estar na página "Definir especialização/cargo"'
+                )
+        else:
+            raise Exception(
+                'Não estou na página de "Definir especialização/cargo"')
 
     def export_csv(self, *args, **kwargs) -> Path:
         """
@@ -1239,7 +1259,3 @@ class Acoes(PageElement):
         Aperta botão para "Receber Selecionados"
         """
         self.click(self.btn_receber)
-
-
-if __name__ == '__main__':
-    pass

@@ -145,6 +145,7 @@ class Login(Page):
                 if msg == 'Usuário e/ou senha inválidos':
                     raise Exception(msg)
 
+
         else:
             # Define Variável
             self.user = user.get_username()
