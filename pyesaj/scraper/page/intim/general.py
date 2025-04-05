@@ -8,7 +8,7 @@ import tempfile
 import time
 import logging
 from pathlib import Path
-from typing import List, Literal
+from typing import List, Literal, Iterable
 from urllib.parse import urlparse
 
 from selenium.webdriver.common.by import By
@@ -773,13 +773,13 @@ class CheckResults(PageElement):
             except:
                 tab = None
 
-            if tab == None and msg == None:
+            if tab is None and msg is None:
                 tipo_resultado_var = None
 
-            elif tab == None and msg != None:
+            elif tab is None and msg is not None:
                 tipo_resultado_var = 'Mensagem'
 
-            elif tab != None and msg == None:
+            elif tab is not None and msg is None:
                 tipo_resultado_var = 'Tabela'
 
             else:
@@ -789,11 +789,11 @@ class CheckResults(PageElement):
         return tipo_resultado_var
 
     @disable_logging_property
-    def messages(self) -> list | None:
+    def messages(self) -> list | None | Iterable[str]:
         """
-        Obtem a lista de mensagens
+        Obtém a lista de mensagens
         """
-        # Obtem o tipo de Resultado
+        # Obtém o tipo de Resultado
         tipo_resultado_var = self.tipo_resultado
 
         # Se é Mensagem

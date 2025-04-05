@@ -1,7 +1,7 @@
 """
 Módulo para criar decorator para desabilitar o login em funções.
 
-Isso se faz necessário pois existem funções que usam a tentativa e erro de encontrar um elemento, para trazer um resultado.
+Isso se faz necessário, pois existem funções que usam a tentativa e erro de encontrar um elemento, para trazer um resultado.
 Por exemplo, "não tem resultado" é um retorno quando a função não encontra elementos.
 
 Logo, é necessário desabilitar o logging "não encontrou elementos" para essas funções, deixando-a apenas em funções que é necessário encontrar um elemento, senão é erro....
@@ -44,7 +44,7 @@ def disable_logging_property(func):
 if __name__ == '__main__':
     logging.basicConfig(
         level=logging.DEBUG,
-        format=('%(levelname)s: %(funcName)s(): %(message)s'),
+        format='%(levelname)s: %(funcName)s(): %(message)s',
     )
     log = logging.getLogger()
 
@@ -53,8 +53,8 @@ if __name__ == '__main__':
     # log.debug("Here's an interesting value: %r" % some_value)
     # log.info("Going great here!")
 
-    # @disable_logging
+    @disable_logging
     def my_func1():
-        log.debug("This is my_func1()")
+        log.debug('This is my_func1()')
 
     my_func1()
