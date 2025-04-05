@@ -18,7 +18,7 @@ from pyesaj.scraper.params.intim.input import ConsultaIntimacoes, \
 def especializa(
     driver: webdriver.Firefox,
     dados: Union[RecebeIntimacoes, ConsultaIntimacoes],
-) -> tuple[bool, CheckError, CheckResults]:
+) -> tuple[CheckError, CheckResults]:
     """
     Pesquisa pelas intimações
 
