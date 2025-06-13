@@ -66,7 +66,6 @@ em funcionamento.
 
 ![eSAJ](./docs/assets/esaj.gif)
 
-
 <br>
 
 ---
