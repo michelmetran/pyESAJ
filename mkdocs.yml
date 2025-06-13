@@ -111,6 +111,7 @@ plugins:
   - search:
       lang: pt
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      
   - tags:
       tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
