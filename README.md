@@ -16,6 +16,8 @@ do e-SAJ incluem:
 - **Diário da Justiça Eletrônico**: consulta aos cadernos das edições publicadas.
 - **_Push_**: serviço que permite ao advogado receber por e-mail as informações sobre a movimentação processual.
 
+
+
 <br>
 
 ---
